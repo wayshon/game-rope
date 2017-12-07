@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta name="format-detection" content="telephone=no">
+
+<head>
+    <title>剪绳子</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="./fastclick.js"></script>
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <p>当前关卡:
+            <span id="j_level"></span>
+        </p>
+        <h3 class="title">剪绳子</h3>
+    </header>
+    <div class="content" id="j_content">
+        <canvas id="j_canvas"></canvas>
+        <div class="play">
+            <button id="j_play"></button>
+        </div>
+    </div>
+    <div class="mask">
+        <div>
+            <p class="tip" id="j_tip"></p>
+            <div class="maskplay">
+                <button id="j_maskplay"></button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./flexible.js"></script>
+</body>
+
+</html>
