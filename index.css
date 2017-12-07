@@ -47,6 +47,7 @@ header {
 
 .content canvas {
     background: pink;
+    height: 80%;
 }
 
 .play {

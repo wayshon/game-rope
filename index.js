@@ -67,7 +67,7 @@ function initEvent() {
     // })
 }
 
-var width = screen.width, height = screen.height * 0.8,
+var width = screen.width, height = (screen.height - 40) * 0.8,
     lineHeight = height * (3 / 5),
     scX = 0, scY = height / 2, scWidth = 30,
     cutAnimationLength = 0,
