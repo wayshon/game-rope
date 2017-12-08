@@ -103,7 +103,7 @@ function renderCanvas() {
 function draw() {
     if (scX <= 0) {
         direction = 'to'
-    } else if (scX >= width - 20) {
+    } else if (scX >= width - scWidth) {
         direction = 'back'
     }
 
