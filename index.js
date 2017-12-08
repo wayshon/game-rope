@@ -71,7 +71,7 @@ var width = screen.width, height = (screen.height - 40) * 0.8,
     lineHeight = height * (3 / 5),
     scX = 0, scY = height / 2, scWidth = 30,
     cutAnimationLength = 0,
-    direction = 'to', step = 3,
+    direction = 'to', step = 3, stepRange = 1,
     canvas = document.getElementById('j_canvas'),
     ctx = canvas.getContext("2d");
 
@@ -206,12 +206,13 @@ function nextLevel() {
     Els.play.html('剪断');
     scX = 0, direction = 'to', cutAnimationLength = 0;
 
-    if (step < 6) {
-        step += 0.8;
+    stepRange > 0.4 && (stepRange -= 0.2);
+
+    if (step < 8) {
+        step += stepRange;
     } else {
         scWidth -= 2;
     }
-    
     window.cancelAnimationFrame(data.cutAnimation)
     draw();
 }
