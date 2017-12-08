@@ -185,6 +185,7 @@ function stop() {
         data.state = 'fail';
         Els.maskplay.html('重来');
         Els.tip.html('失败了，共完成' + (data.level - 1) + '关')
+        changeMeta();
     }
     Els.mask.show();
 }
@@ -215,6 +216,10 @@ function nextLevel() {
     }
     window.cancelAnimationFrame(data.cutAnimation)
     draw();
+}
+
+function changeMeta () {
+    $('meta[name="description"]').attr('content', '我到了第' + data.level + '关!你呢?')
 }
 
 
